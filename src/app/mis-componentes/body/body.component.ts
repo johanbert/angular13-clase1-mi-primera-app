@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/servicios/api.service';
 
 
 @Component({
@@ -12,7 +11,7 @@ export class BodyComponent implements OnInit {
   public edad1:number = 50;
   private cedula:number = 12312341234;
 
-  constructor(  api:ApiService ) { }
+  constructor(   ) { }
 
   ngOnInit(): void {
   }

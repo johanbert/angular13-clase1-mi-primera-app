@@ -1,0 +1,25 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <td>#</td>
+            <td>Nombre</td>
+            <td>Edad</td>
+            <td>Correo</td>
+            <td>Fecha</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let user of users; let i = index">
+        <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ user.nombre }}</td>
+            <td>{{ user.edad }}</td>
+            <td>{{ user.correo }}</td>
+            <td>{{ user.fecha }}</td>
+            <td>
+                <button type="button" class="btn btn-primary mx-1"><i class="fa fa-edit"></i></button>
+                <button type="button" class="btn btn-danger" (click)="delete(user._id)"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
