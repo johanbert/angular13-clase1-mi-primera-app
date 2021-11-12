@@ -1,10 +1,9 @@
-<table class="table">
+<table class="table" *ngIf="users">
     <thead class="table-dark">
         <tr>
             <td>#</td>
             <td>Nombre</td>
             <td>Edad</td>
-            <td>Correo</td>
             <td>Fecha</td>
             <td>Actions</td>
         </tr>
@@ -14,7 +13,6 @@
             <td>{{ i + 1 }}</td>
             <td>{{ user.nombre }}</td>
             <td>{{ user.edad }}</td>
-            <td>{{ user.correo }}</td>
             <td>{{ user.fecha }}</td>
             <td>
                 <button type="button" class="btn btn-primary mx-1"><i class="fa fa-edit"></i></button>
