@@ -16,10 +16,11 @@ export class UsersComponent implements OnInit {
     this.get();
   }
 
-  get(){
-    this.usersService.get().subscribe( (res:UserI[]) =>{
-      this.users = res;
-    })
+  get(yesOrNot:boolean = true){
+    if (yesOrNot)
+      this.usersService.get().subscribe( (res:UserI[]) =>{
+        this.users = res;
+      })
   }
   delete(userId:string){
     console.log('component delete',userId);
@@ -27,5 +28,8 @@ export class UsersComponent implements OnInit {
       console.log(res)
       this.get();
     })
+  }
+  post(){
+    
   }
 }

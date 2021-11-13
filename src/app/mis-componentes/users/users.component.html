@@ -15,7 +15,8 @@
             <td>{{ user.edad }}</td>
             <td>{{ user.fecha }}</td>
             <td>
-                <button type="button" class="btn btn-primary mx-1"><i class="fa fa-edit"></i></button>
+                <!-- <button type="button" class="btn btn-primary mx-1"><i class="fa fa-edit"></i></button> -->
+                <app-modal-form [userId]="user._id" (updatedEvent)="get($event)"></app-modal-form>
                 <button type="button" class="btn btn-danger" (click)="delete(user._id)"><i class="fa fa-trash"></i></button>
             </td>
         </tr>
